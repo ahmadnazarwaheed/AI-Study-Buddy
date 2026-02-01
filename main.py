@@ -12,7 +12,8 @@ user_question = st.text_input("Type your question here:")
 
 if user_question:
     try:
-        response = openai.chat.completions.create(
+        # Old API style (works with openai==0.28.0)
+        response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": user_question}]
         )
