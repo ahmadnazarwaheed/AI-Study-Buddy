@@ -1,15 +1,12 @@
 import streamlit as st
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-# Page config
 st.set_page_config(page_title="AI Study Buddy", page_icon="🧠", layout="centered")
 st.title("🧠 AI Study Buddy")
 st.write("Ask a question and get step-by-step explanations!")
 
-# Input from user
 user_question = st.text_input("Type your question here:")
 
-# Load the model once and cache it
 @st.cache_resource(show_spinner=True)
 def load_model():
     model_name = "TheBloke/Mistral-7B-Instruct-GGML"  # Free open-source instruct model
@@ -20,7 +17,6 @@ def load_model():
 
 generator = load_model()
 
-# Generate response
 if user_question:
     try:
         with st.spinner("Thinking..."):
