@@ -1,10 +1,17 @@
 # AI-Study-Buddy
-AI Study Buddy is an AI-powered learning assistant that helps users understand difficult topics through step-by-step explanations, guided hints, and automatically generated practice exercises to promote independent learning.
 
-## How to Run
-1. Install Python 3.11+
-2. Create a virtual environment:
-   python -m venv venv
-3. Install dependencies:
-   pip install -r requirements.txt
-4. Run main.py to test the AI call.
+AI Study Buddy is an AI-powered learning assistant that helps students understand difficult topics through step-by-step explanations, hints, and automatically generated practice exercises.
+
+This version is **completely free and unlimited** — it uses an open-source AI model, so **no API key or paid subscription** is needed.
+
+---
+
+## How to Run (Windows)
+
+1. Install Python 3.11+  
+   Download: https://www.python.org/downloads/
+
+2. Open Command Prompt in your project folder.
+
+3. Create a virtual environment:
+   ```bash
