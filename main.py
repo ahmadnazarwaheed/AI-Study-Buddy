@@ -1,33 +1,24 @@
+import os
 import streamlit as st
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+import openai
 
-st.set_page_config(page_title="AI Study Buddy", page_icon="🧠", layout="centered")
-st.title("🧠 AI Study Buddy")
+# Load your OpenAI API key from Streamlit Secrets
+openai.api_key = os.environ["OPENAI_API_KEY"]
+
+st.title("AI Study Buddy")
 st.write("Ask a question and get step-by-step explanations!")
 
 user_question = st.text_input("Type your question here:")
 
-@st.cache_resource(show_spinner=True)
-def load_model():
-    model_name = "TheBloke/Mistral-7B-Instruct-GGML"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(model_name)
-    generator = pipeline("text-generation", model=model, tokenizer=tokenizer)
-    return generator
-
-generator = load_model()
-
 if user_question:
     try:
-        with st.spinner("Thinking..."):
-            response = generator(
-                user_question,
-                max_length=300,
-                do_sample=True,
-                temperature=0.7
-            )
-            answer = response[0]['generated_text']
-
+        response = openai.chat.completions.create(
+        # Old API style (works with openai==0.28.0)
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": user_question}]
+        )
+        answer = response.choices[0].message.content
         st.write("**Your question:**", user_question)
         st.write("**AI answer:**", answer)
 
