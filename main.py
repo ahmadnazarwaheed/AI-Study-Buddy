@@ -9,7 +9,7 @@ user_question = st.text_input("Type your question here:")
 
 @st.cache_resource(show_spinner=True)
 def load_model():
-    model_name = "TheBloke/Mistral-7B-Instruct-GGML"  # Free open-source instruct model
+    model_name = "TheBloke/Mistral-7B-Instruct-GGML"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
     generator = pipeline("text-generation", model=model, tokenizer=tokenizer)
@@ -20,7 +20,12 @@ generator = load_model()
 if user_question:
     try:
         with st.spinner("Thinking..."):
-            response = generator(user_question, max_length=300, do_sample=True, temperature=0.7)
+            response = generator(
+                user_question,
+                max_length=300,
+                do_sample=True,
+                temperature=0.7
+            )
             answer = response[0]['generated_text']
 
         st.write("**Your question:**", user_question)
