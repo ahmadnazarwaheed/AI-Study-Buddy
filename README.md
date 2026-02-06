@@ -26,7 +26,7 @@ AI Study Buddy promotes active learning by helping students convert reading mate
 
 ## 🖥️ Live App
 
-(Add Base44 App Link Here)
+https://ai-studybuddy.base44.app
 
 ## 📸 Screenshots
 
