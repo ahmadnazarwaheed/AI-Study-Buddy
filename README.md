@@ -1,23 +1,44 @@
-# AI Study Buddy
+# AI-Study-Buddy
 
-**AI Study Buddy** is an AI-powered learning assistant that helps users study by generating practice questions from any text they provide. Users can answer the questions, get instant feedback with explanations, and manage multiple question sets for efficient, personalized learning.
+AI Study Buddy is an AI-powered study tool that helps users learn more effectively by turning large chunks of educational text into automatically generated practice questions. Instead of passively reading notes or textbooks, users can paste study material and receive AI-generated questions to test their understanding and improve retention.
 
----
+## 🚀 Project Overview
 
-## Features
+AI Study Buddy promotes active learning by helping students convert reading material into interactive question sets. The app allows users to study smarter by practicing recall and identifying knowledge gaps.
 
-- Generate **customizable numbers of questions** (1–50) from any chunk of text  
-- **Answer and submit** questions to receive grading and improvement suggestions  
-- **Save, rename, view, and delete** question sets  
-- Handles **edge cases** like long, short, or ambiguous text inputs  
-- **Safe logging** and secure handling of API keys  
-- Smooth, **student-friendly interface** with loading indicators and error messages  
+## 🎯 Features
 
----
+- Paste large chunks of study text
+- Automatically generates question sets from the text
+- Adjustable number of questions (up to 50)
+- Users can answer questions directly in the app
+- AI grading and feedback on answers
+- Saves previous question sets
+- Allows users to rename or delete saved sets
+- Simple and user-friendly interface
 
-## How to Run
+## ⚙️ How It Works
 
-1. Install Python 3.11 or higher  
-2. Create a virtual environment:  
-   ```bash
-   python -m venv venv
+1. User pastes study material into the app
+2. The AI analyzes the content
+3. The AI generates relevant study questions
+4. Users answer questions and receive feedback
+
+## 🖥️ Live App
+
+(Add Base44 App Link Here)
+
+## 📸 Screenshots
+
+(Add screenshots here)
+
+## 🛠️ Technology Used
+
+- Base44 No-Code AI Platform
+- Large Language Model Integration
+- Prompt Engineering
+
+## 👨‍💻 Creator
+
+Ahmad Nazar  
+Created for the Decoding Data Science Build & AI Challenge
