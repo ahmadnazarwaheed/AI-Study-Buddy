@@ -30,7 +30,7 @@ https://ai-studybuddy.base44.app
 
 ## 📸 Screenshots
 
-(Add screenshots here)
+<img width="1918" height="943" alt="Screenshot 2026-02-06 142012" src="https://github.com/user-attachments/assets/909109c3-9324-45ea-b8f1-619ea0a6374d" />
 
 ## 🛠️ Technology Used
 
