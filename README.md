@@ -41,4 +41,4 @@ AI Study Buddy promotes active learning by helping students convert reading mate
 ## 👨‍💻 Creator
 
 Ahmad Nazar  
-Created for the Decoding Data Science Build & AI Challenge
+Created for the Decoding Data Science Build an AI Challenge
